@@ -1,219 +1,359 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lavoc Limited — Software consultancy and 3D printing</title>
-<meta name="description" content="Lavoc Limited is an Irish company providing software consultancy and 3D printing services.">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lavoc Limited — Software consultancy and 3D printing</title>
+    <meta
+      name="description"
+      content="Lavoc Limited is an Irish company providing software consultancy and 3D printing services."
+    />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
 
-<!--
+    <!--
   EDIT BEFORE PUBLISHING — search for "EDIT" in this file:
   1. Contact email (appears twice)
   2. Company registration number and registered address in the footer
 -->
 
-<style>
-  :root {
-    --bg: #F5F6F3;
-    --ink: #161C1A;
-    --muted: #66706C;
-    --line: #D3D8D2;
-    --accent: #2456C8;
-    --measure: 62ch;
-    --gutter: clamp(20px, 6vw, 96px);
-  }
+    <style>
+      :root {
+        --bg: #f5f6f3;
+        --ink: #161c1a;
+        --muted: #66706c;
+        --line: #d3d8d2;
+        --accent: #2456c8;
+        --measure: 62ch;
+        --gutter: clamp(20px, 6vw, 96px);
+      }
 
-  *, *::before, *::after { box-sizing: border-box; }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
 
-  html { scroll-behavior: smooth; }
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+      html {
+        scroll-behavior: smooth;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
 
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font-family: "Schibsted Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
-    font-size: 17px;
-    line-height: 1.55;
-    -webkit-font-smoothing: antialiased;
-  }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family:
+          "Schibsted Grotesk",
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          sans-serif;
+        font-size: 17px;
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+      }
 
-  a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
-  a:hover { color: var(--accent); }
-  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+      a {
+        color: inherit;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+      }
+      a:hover {
+        color: var(--accent);
+      }
+      :focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+        border-radius: 2px;
+      }
 
-  p { margin: 0 0 1em; max-width: var(--measure); }
-  h2 { font-size: 1.05rem; font-weight: 500; margin: 0 0 1.25rem; }
-  h3 { font-size: 1.45rem; font-weight: 700; line-height: 1.2; margin: 0 0 0.75rem; letter-spacing: -0.01em; }
-  ul { margin: 0; padding: 0; list-style: none; }
+      p {
+        margin: 0 0 1em;
+        max-width: var(--measure);
+      }
+      h2 {
+        font-size: 1.05rem;
+        font-weight: 500;
+        margin: 0 0 1.25rem;
+      }
+      h3 {
+        font-size: 1.45rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin: 0 0 0.75rem;
+        letter-spacing: -0.01em;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
 
-  .wrap { padding-left: var(--gutter); padding-right: var(--gutter); max-width: 1180px; }
+      .wrap {
+        padding-left: var(--gutter);
+        padding-right: var(--gutter);
+        max-width: 1180px;
+      }
 
-  /* Header */
-  header {
-    display: flex; justify-content: space-between; align-items: baseline;
-    padding-top: 28px; padding-bottom: 28px;
-    font-size: 0.95rem;
-  }
-  header .brand { font-weight: 700; text-decoration: none; letter-spacing: -0.01em; }
-  header nav a { margin-left: 1.5rem; text-decoration: none; color: var(--muted); }
-  header nav a:hover { color: var(--accent); }
+      /* Header */
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding-top: 28px;
+        padding-bottom: 28px;
+        font-size: 0.95rem;
+      }
+      header .brand {
+        font-weight: 700;
+        text-decoration: none;
+        letter-spacing: -0.01em;
+      }
+      header nav a {
+        margin-left: 1.5rem;
+        text-decoration: none;
+        color: var(--muted);
+      }
+      header nav a:hover {
+        color: var(--accent);
+      }
 
-  /* Hero */
-  .hero { padding-top: clamp(40px, 9vw, 140px); padding-bottom: clamp(56px, 8vw, 120px); }
+      /* Hero */
+      .hero {
+        padding-top: clamp(40px, 9vw, 140px);
+        padding-bottom: clamp(56px, 8vw, 120px);
+      }
 
-  .wordmark {
-    margin: 0;
-    font-size: clamp(88px, 21vw, 300px);
-    font-weight: 700;
-    line-height: 0.85;
-    letter-spacing: -0.045em;
-    color: var(--ink);
-    /* Layer lines: the wordmark reads as a 3D print, sliced horizontally */
-    -webkit-mask-image: repeating-linear-gradient(to bottom, #000 0 5px, transparent 5px 7px);
-            mask-image: repeating-linear-gradient(to bottom, #000 0 5px, transparent 5px 7px);
-    /* Print from the bed up */
-    clip-path: inset(100% 0 0 0);
-    animation: print 1.6s cubic-bezier(.22,.9,.3,1) .15s forwards;
-    user-select: none;
-  }
-  @keyframes print { to { clip-path: inset(0 0 0 0); } }
-  @media (prefers-reduced-motion: reduce) {
-    .wordmark { animation: none; clip-path: none; }
-  }
+      .wordmark {
+        margin: 0;
+        font-size: clamp(88px, 21vw, 300px);
+        font-weight: 700;
+        line-height: 0.85;
+        letter-spacing: -0.045em;
+        color: var(--ink);
+        /* Layer lines: the wordmark reads as a 3D print, sliced horizontally */
+        -webkit-mask-image: repeating-linear-gradient(
+          to bottom,
+          #000 0 5px,
+          transparent 5px 7px
+        );
+        mask-image: repeating-linear-gradient(
+          to bottom,
+          #000 0 5px,
+          transparent 5px 7px
+        );
+        /* Print from the bed up */
+        clip-path: inset(100% 0 0 0);
+        animation: print 1.6s cubic-bezier(0.22, 0.9, 0.3, 1) 0.15s forwards;
+        user-select: none;
+      }
+      @keyframes print {
+        to {
+          clip-path: inset(0 0 0 0);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .wordmark {
+          animation: none;
+          clip-path: none;
+        }
+      }
 
-  .hero p {
-    font-size: clamp(1.15rem, 2vw, 1.5rem);
-    line-height: 1.35;
-    max-width: 30ch;
-    margin: clamp(28px, 4vw, 56px) 0 0;
-    letter-spacing: -0.01em;
-  }
+      .hero p {
+        font-size: clamp(1.15rem, 2vw, 1.5rem);
+        line-height: 1.35;
+        max-width: 30ch;
+        margin: clamp(28px, 4vw, 56px) 0 0;
+        letter-spacing: -0.01em;
+      }
 
-  /* Sections */
-  section { padding-top: clamp(48px, 7vw, 96px); padding-bottom: clamp(48px, 7vw, 96px); border-top: 1px solid var(--line); }
+      /* Sections */
+      section {
+        padding-top: clamp(48px, 7vw, 96px);
+        padding-bottom: clamp(48px, 7vw, 96px);
+        border-top: 1px solid var(--line);
+      }
 
-  .services {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: clamp(32px, 6vw, 96px);
-  }
-  .service li { padding: 0.55rem 0; border-top: 1px solid var(--line); color: var(--ink); }
-  .service li:last-child { border-bottom: 1px solid var(--line); }
-  .service ul { margin-top: 1.5rem; max-width: 34ch; }
-  .service p { color: var(--muted); }
+      .services {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: clamp(32px, 6vw, 96px);
+      }
+      .service li {
+        padding: 0.55rem 0;
+        border-top: 1px solid var(--line);
+        color: var(--ink);
+      }
+      .service li:last-child {
+        border-bottom: 1px solid var(--line);
+      }
+      .service ul {
+        margin-top: 1.5rem;
+        max-width: 34ch;
+      }
+      .service p {
+        color: var(--muted);
+      }
 
-  .about p:first-of-type { font-size: 1.2rem; line-height: 1.45; letter-spacing: -0.005em; }
+      .about p:first-of-type {
+        font-size: 1.2rem;
+        line-height: 1.45;
+        letter-spacing: -0.005em;
+      }
 
-  .contact .email {
-    display: inline-block;
-    font-size: clamp(1.5rem, 4vw, 2.75rem);
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    text-decoration: none;
-    border-bottom: 3px solid var(--ink);
-    line-height: 1.15;
-    margin: 0.25rem 0 1.5rem;
-  }
-  .contact .email:hover { border-color: var(--accent); }
+      .contact .email {
+        display: inline-block;
+        font-size: clamp(1.5rem, 4vw, 2.75rem);
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        text-decoration: none;
+        border-bottom: 3px solid var(--ink);
+        line-height: 1.15;
+        margin: 0.25rem 0 1.5rem;
+      }
+      .contact .email:hover {
+        border-color: var(--accent);
+      }
 
-  footer {
-    border-top: 1px solid var(--line);
-    padding-top: 32px; padding-bottom: 48px;
-    color: var(--muted);
-    font-size: 0.875rem;
-    display: flex; flex-wrap: wrap; gap: 8px 40px; justify-content: space-between;
-  }
-  footer p { margin: 0; max-width: none; }
+      footer {
+        border-top: 1px solid var(--line);
+        padding-top: 32px;
+        padding-bottom: 48px;
+        color: var(--muted);
+        font-size: 0.875rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 40px;
+        justify-content: space-between;
+      }
+      footer p {
+        margin: 0;
+        max-width: none;
+      }
 
-  @media (max-width: 720px) {
-    header nav a { margin-left: 1rem; }
-    .services { grid-template-columns: 1fr; gap: 48px; }
-    .wordmark {
-      -webkit-mask-image: repeating-linear-gradient(to bottom, #000 0 3px, transparent 3px 4.5px);
-              mask-image: repeating-linear-gradient(to bottom, #000 0 3px, transparent 3px 4.5px);
-    }
-  }
-</style>
-</head>
+      @media (max-width: 720px) {
+        header nav a {
+          margin-left: 1rem;
+        }
+        .services {
+          grid-template-columns: 1fr;
+          gap: 48px;
+        }
+        .wordmark {
+          -webkit-mask-image: repeating-linear-gradient(
+            to bottom,
+            #000 0 3px,
+            transparent 3px 4.5px
+          );
+          mask-image: repeating-linear-gradient(
+            to bottom,
+            #000 0 3px,
+            transparent 3px 4.5px
+          );
+        }
+      }
+    </style>
+  </head>
 
-<body>
+  <body>
+    <header class="wrap">
+      <a class="brand" href="#top">Lavoc Limited</a>
+      <nav aria-label="Sections">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
-<header class="wrap">
-  <a class="brand" href="#top">Lavoc Limited</a>
-  <nav aria-label="Sections">
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<main id="top">
-
-  <div class="hero wrap">
-    <h1 class="wordmark" aria-label="Lavoc">Lavoc</h1>
-    <p>Software consultancy and 3D printing, from Ireland.</p>
-  </div>
-
-  <section id="services" class="wrap">
-    <h2>What we do</h2>
-    <div class="services">
-
-      <div class="service">
-        <h3>Software consultancy</h3>
-        <p>Design, build and scale connected products. Over a decade of shipping IoT platforms and the firmware, networks and cloud services behind them.</p>
-        <ul>
-          <li>IoT and connected product architecture</li>
-          <li>LoRaWAN, sensor networks and gateway fleets</li>
-          <li>Embedded firmware and hardware bring-up</li>
-          <li>Cloud platforms, data pipelines and dashboards</li>
-          <li>Fractional CTO and technical due diligence</li>
-        </ul>
+    <main id="top">
+      <div class="hero wrap">
+        <h1 class="wordmark" aria-label="Lavoc">Lavoc</h1>
+        <p>Software consultancy and 3D printing, from Ireland.</p>
       </div>
 
-      <div class="service">
-        <h3>3D printing services</h3>
-        <p>Parts, prototypes and short production runs, printed in-house. From a sketch or a CAD file to a finished object in days, not weeks.</p>
-        <ul>
-          <li>Rapid prototyping and design iteration</li>
-          <li>Small-batch and on-demand production</li>
-          <li>Design for additive manufacturing</li>
-          <li>Custom fixtures, enclosures and replacement parts</li>
-          <li>Personalised and bespoke printed products</li>
-        </ul>
-      </div>
+      <section id="services" class="wrap">
+        <h2>What we do</h2>
+        <div class="services">
+          <div class="service">
+            <h3>Software consultancy</h3>
+            <p>
+              Design, build and scale connected products. Over a decade of
+              shipping IoT platforms and the firmware, networks and cloud
+              services behind them.
+            </p>
+            <ul>
+              <li>IoT and connected product architecture</li>
+              <li>LoRaWAN, sensor networks and gateway fleets</li>
+              <li>Embedded firmware and hardware bring-up</li>
+              <li>Cloud platforms, data pipelines and dashboards</li>
+              <li>Fractional CTO and technical due diligence</li>
+            </ul>
+          </div>
 
-    </div>
-  </section>
+          <div class="service">
+            <h3>3D printing services</h3>
+            <p>
+              Parts, prototypes and short production runs, printed in-house.
+              From a sketch or a CAD file to a finished object in days, not
+              weeks.
+            </p>
+            <ul>
+              <li>Rapid prototyping and design iteration</li>
+              <li>Small-batch and on-demand production</li>
+              <li>Design for additive manufacturing</li>
+              <li>Custom fixtures, enclosures and replacement parts</li>
+              <li>Personalised and bespoke printed products</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-  <section id="about" class="wrap about">
-    <h2>About</h2>
-    <p>Lavoc Limited is an Irish company that brings software and physical making under one roof. We work with founders, engineering teams and businesses who need something designed, built, or made.</p>
-    <p>Founded and led by Conall Laverty, an engineer who has spent his career building hardware, firmware and software products, and who spends his spare time at the printer.</p>
-  </section>
+      <section id="about" class="wrap about">
+        <h2>About</h2>
+        <p>
+          Lavoc Limited is an Irish company that brings software and physical
+          making under one roof. We work with founders, engineering teams and
+          businesses who need something designed, built, or made.
+        </p>
+        <p>
+          Founded and led by Conall Laverty, an engineer who has spent his
+          career building hardware, firmware and software products, and who
+          spends his spare time at the printer.
+        </p>
+      </section>
 
-  <section id="contact" class="wrap contact">
-    <h2>Get in touch</h2>
-    <!-- EDIT: contact email -->
-    <a class="email" href="mailto:hello@lavoc.ie">hello@lavoc.ie</a>
-    <p>Tell us what you're trying to build or make. We'll reply within two working days.</p>
-  </section>
+      <section id="contact" class="wrap contact">
+        <h2>Get in touch</h2>
+        <!-- EDIT: contact email -->
+        <a class="email" href="mailto:conall@lavoc.ie">conall@lavoc.ie</a>
+        <p>
+          Tell us what you're trying to build or make. We'll reply within two
+          working days.
+        </p>
+      </section>
+    </main>
 
-</main>
+    <footer class="wrap">
+      <p>© <span id="year">2026</span> Lavoc Limited</p>
+      <!-- EDIT: company registration number and registered address -->
+      <p>
+        Registered in Ireland, No. 733644 · Dogpatch Labs, The CHQ Building,
+        Dublin, Ireland
+      </p>
+    </footer>
 
-<footer class="wrap">
-  <p>© <span id="year">2026</span> Lavoc Limited</p>
-  <!-- EDIT: company registration number and registered address -->
-  <p>Registered in Ireland, No. 000000 · Registered address goes here</p>
-</footer>
-
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-
-</body>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
